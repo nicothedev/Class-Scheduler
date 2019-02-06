@@ -1,0 +1,81 @@
+import java.lang.String;
+import java.util.*;
+public class student {
+	
+	String firstName;
+	String lastName;
+	int age;
+	int studentID;
+	int currentCredits;
+	ArrayList<String> schedule = new ArrayList<String>();
+	
+	//Default constructor
+	public student(){}
+	
+	//Main constructor
+	public student(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	//Setters
+	public void setFirstName(String x){
+		this.firstName = x;
+	}
+	public void setLastName(String x){
+			this.lastName = x;
+		}
+	public void setAge(int x){
+		this.age = x;
+	}
+	public void setStudentID(int x){
+		this.studentID = x;
+	}
+	public void setCurrentCredits(int x){
+			this.currentCredits = x;
+		}
+	public void setSchedule(String x){
+		this.schedule.add(x);
+	}
+	//getters
+	public String getFirstName(){
+		return this.firstName;
+	}
+	public String getLastName(){
+			return this.lastName;
+		}
+	public int getAge(){
+		return this.age;
+	}
+	public int getStudentID(){
+		return this.studentID;
+	}
+	public int getCurrentCredits(){
+		return this.currentCredits;
+		}
+	public ArrayList<String> getSchedule(){
+		return this.schedule;
+	}
+	public void getAllInformation() {
+		
+		System.out.println("Student's full name is: " + this.firstName + " " + this.lastName);
+		System.out.println("Student ID#: " + this.studentID);
+		System.out.println("They are " +age+ " years of age");
+		System.out.println("The student currently has completed " + this.currentCredits + " credts");
+		System.out.println("Their current semestre schedule is " + this.schedule);
+		
+		
+	}
+	//tester
+	public static void main(String[]args) {
+		student guy = new student();
+		guy.setFirstName("daniel");
+		guy.setLastName("feuchster");
+		guy.setSchedule("checm 101");
+		guy.setSchedule("checm 201"); 
+		guy.setStudentID(880437283);
+		
+		guy.getAllInformation();
+		
+		
+	}
+}
